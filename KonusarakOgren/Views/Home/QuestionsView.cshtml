@@ -1,0 +1,32 @@
+﻿@model List<QuestionsViewModel>
+    <div class="row">
+        @for(var i = 0; i < 4; i++)
+        {
+            <div class="col-6 questions">
+                <div class="row">
+                    <span>@(i+1))</span>
+                    <label id="question-text"> @Model[i].Text</label>
+                    <input id="QuestionId-@(i+1)" value="@Model[i].QuestionId" hidden />
+                </div>
+                <div class="row">
+                    <input class="checkbox-question" type="radio" name="question@(i+1)" id="question@(i+1)-A" value="A">
+                    <label class="for-checkbox-question" for="question@(i+1)-A">
+                        <span data-hover="A) @Model[i].A">A) @Model[i].A</span>
+                    </label>
+                    <input class="checkbox-question" type="radio" name="question@(i+1)" id="question@(i+1)-B" value="B">
+                    <label class="for-checkbox-question" for="question@(i+1)-B">
+                        <span data-hover="B) @Model[i].B">B) @Model[i].B</span>
+                    </label>
+                    <input class="checkbox-question" type="radio" name="question@(i+1)" id="question@(i+1)-C" value="C">
+                    <label class="for-checkbox-question" for="question@(i+1)-C">
+                        <span data-hover="C) @Model[i].C">C) @Model[i].C</span>
+                    </label>
+                    <input class="checkbox-question" type="radio" name="question@(i+1)" id="question@(i+1)-D" value="D">
+                    <label class="for-checkbox-question" for="question@(i+1)-D">
+                        <span data-hover="D) @Model[i].D">D) @Model[i].D</span>
+                    </label>
+                </div>
+            </div>
+        }
+
+    </div>
